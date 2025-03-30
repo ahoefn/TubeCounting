@@ -1,6 +1,6 @@
 #include "ArenaBase.h"
 
-Arena ArenaCreate(int size)
+Arena ArenaCreate(long long int size)
 {
     assert(size > 0);
     Arena arena;

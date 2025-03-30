@@ -10,7 +10,7 @@ typedef struct Arena
     char *nextLocation;
 } Arena;
 
-Arena ArenaCreate(int size);
+Arena ArenaCreate(long long int size);
 void ArenaDelete(Arena *arenaPtr);
 void *ArenaAlloc(int size, Arena *arenaPtr);
 void ArenaReset(Arena *arenaPtr);
