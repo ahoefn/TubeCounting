@@ -1,0 +1,13 @@
+CC = gcc
+GenFiles = Utilities/Utilities.c
+
+TubeCountingFiles = $(wildcard Tubes/*.c) $(wildcard Counting/*.c)
+ArenaFiles= $(wildcard ../MemoryManagement/MemoryArena/ArenaBase/*.c) $(wildcard ../MemoryManagement/MemoryArena/ArenaArray/*.c) 
+TestFiles = $(wildcard Tests/*.c) 
+
+main: main.c  $(TubeCountingFiles) $(ArenaFiles)  $(GenFiles)
+	$(CC) main.c $(TubeCountingFiles) $(ArenaFiles)  $(GenFiles) -Wall -pedantic -o output.exe
+
+
+Test: $(TubeCountingFiles) $(ArenaFiles) $(TestFiles) $(GenFiles)
+	$(CC) $(TubeCountingFiles) $(ArenaFiles) $(TestFiles) $(GenFiles) -Wall -pedantic -o output.exe
