@@ -1,7 +1,7 @@
 #ifndef TUBES
 #define TUBES
 
-#include "../../MemoryManagement/MemoryArena/MemoryArena.h"
+#include "../MemoryArena/MemoryArena.h"
 typedef struct Tube
 {
     int start;

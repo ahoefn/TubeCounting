@@ -42,7 +42,7 @@ Tubing SelectValidTubes(Tube T, Tubing tubing, Arena *arenaPtr)
 
 int CountValidTubes(Tubing tubing, Arena *arenaPtr)
 {
-    if (tubing.size = 1)
+    if (tubing.size == 1)
     {
         return 1;
     }
