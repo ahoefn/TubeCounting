@@ -5,9 +5,14 @@ TubeCountingFiles = $(wildcard Tubes/*.c) $(wildcard Counting/*.c)
 ArenaFiles= $(wildcard MemoryArena/ArenaBase/*.c) $(wildcard MemoryArena/ArenaArray/*.c) 
 TestFiles = $(wildcard Tests/*.c) 
 
+debug: main.c  $(TubeCountingFiles) $(ArenaFiles)  $(GenFiles)
+	$(CC) main.c $(TubeCountingFiles) $(ArenaFiles)  $(GenFiles) -g -Wall -pedantic -o .build/main.exe
+
+
 main: main.c  $(TubeCountingFiles) $(ArenaFiles)  $(GenFiles)
-	$(CC) main.c $(TubeCountingFiles) $(ArenaFiles)  $(GenFiles) -Wall -pedantic -o output.exe
+	$(CC) main.c $(TubeCountingFiles) $(ArenaFiles)  $(GenFiles) -Wall -pedantic -o main.exe
 
 
 Test: $(TubeCountingFiles) $(ArenaFiles) $(TestFiles) $(GenFiles)
-	$(CC) $(TubeCountingFiles) $(ArenaFiles) $(TestFiles) $(GenFiles) -Wall -pedantic -o output.exe
+	$(CC) $(TubeCountingFiles) $(ArenaFiles) $(TestFiles) $(GenFiles) -Wall -pedantic -o build/main.exe
+

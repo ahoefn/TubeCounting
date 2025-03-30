@@ -2,11 +2,11 @@
 
 int main()
 {
-    Arena arena = ArenaCreate(300000 * sizeof(Tube));
+    Arena arena = ArenaCreate(90000000 * sizeof(Tube));
     int countingResult;
     int memoryUsed;
     Tubing generatedTubes;
-    for (int n = 1; n < 10; n++)
+    for (int n = 1; n < 20; n++)
     {
         // printf("Starting count:\n");
         generatedTubes = GenConnectedTubes(n, &arena);
