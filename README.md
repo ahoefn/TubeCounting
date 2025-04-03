@@ -12,6 +12,6 @@ while in the TubeCounting directory, then run
 
 to run the actual program. Alternatively, see the [release]() for a downloadable .exe version.
 
-### Dependicies
+### Dependencies
 
 [GNU make](https://www.gnu.org/software/make/) for building.
