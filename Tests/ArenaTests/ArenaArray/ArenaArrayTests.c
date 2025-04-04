@@ -1,4 +1,4 @@
-#include "../../ArenaArray/ArenaArray.h"
+#include "../../Source/MemoryArena/ArenaArray/ArenaArray.h"
 
 void ArenaArrayIntCreateTest();
 void ArenaArrayIntGetSetTest();

@@ -1,4 +1,4 @@
-#include "CountingTests.h"
+#include "../Source/Counting/Counting.h"
 
 void DoesNotCrossTest()
 {
