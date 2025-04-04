@@ -1,3 +1,7 @@
+#include <stdlib.h>
+#include <assert.h>
+
+#include "../../Utilities/Utilities.h"
 #include "ArenaBase.h"
 
 Arena ArenaCreate(long long int size)

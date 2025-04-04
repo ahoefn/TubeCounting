@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <assert.h>
+
 #include "../Source/Counting/Counting.h"
 
 void DoesNotCrossTest()

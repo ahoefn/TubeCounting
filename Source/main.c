@@ -1,4 +1,8 @@
-#include "main.h"
+#include <stdio.h>
+
+#include "MemoryArena/MemoryArena.h"
+#include "Counting/Counting.h"
+#include "Tubes/Tubes.h"
 
 int main()
 {

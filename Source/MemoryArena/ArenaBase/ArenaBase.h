@@ -1,8 +1,6 @@
 #ifndef MEMORYARENABASE
 #define MEMORYARENABASE
 
-#include "../../Utilities/Utilities.h"
-
 typedef struct Arena
 {
     char *memoryPtr;

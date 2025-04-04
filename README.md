@@ -2,15 +2,17 @@ A small script that counts the number of tubings for an arbitrary diagram, based
 
 ### Compiling
 
-The code here can be compiled using the makefile (see dependencies), in particular simply run
+If the 'gcc' compiler and 'GNU make' are installed, the project can be build simply using
 
     make
 
-while in the TubeCounting directory, then run
+while in the TubeCounting directory, and then 
 
     ./.build/main.exe
 
-to run the actual program. Alternatively, see the [release]() for a downloadable .exe version.
+to run the actual program. 
+
+Alternatively, see the [release]() for a downloadable .exe version.
 
 ### Dependencies
 

@@ -1,3 +1,5 @@
+#include <assert.h>
+#include <stdio.h>
 #include "../../../Source/MemoryArena/ArenaBase/ArenaBase.h"
 
 void ArenaAllocTest();
@@ -16,18 +18,19 @@ void ArenaAllocTest()
     int lengthTotal = 6;
     int lengthBuf1 = 4;
     int lengthBuf2 = 2;
-    Arena arena = ArenaCreate(lengthTotal * sizeof(int));
 
+    // Setup arena:
+    Arena arena = ArenaCreate(lengthTotal * sizeof(int));
     assert(arena.memoryPtr + lengthTotal * sizeof(int) == arena.end);
     assert(arena.nextLocation == arena.memoryPtr);
 
+    // Setup buffer:
     int *buf11 = (int *)ArenaAlloc(lengthBuf1 * sizeof(int), &arena);
 
     assert(arena.memoryPtr + lengthBuf1 * sizeof(int) == arena.nextLocation);
-
     int *buf12 = (int *)ArenaAlloc(lengthBuf2 * sizeof(int), &arena);
-
     assert(arena.memoryPtr + (lengthBuf1 + lengthBuf2) * sizeof(int) == arena.nextLocation);
+
     // Initialize arrays
     for (int i = 0; i < lengthBuf1; i++)
     {

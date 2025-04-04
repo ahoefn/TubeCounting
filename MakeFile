@@ -1,18 +1,16 @@
 CC = gcc
-GenFiles = Utilities/Utilities.c
 
-TubeCountingFiles = $(wildcard Tubes/*.c) $(wildcard Counting/*.c)
-ArenaFiles= $(wildcard MemoryArena/ArenaBase/*.c) $(wildcard MemoryArena/ArenaArray/*.c) 
-TestFiles = $(wildcard Tests/*.c) 
+TubeCountingFiles = $(wildcard Source/Tubes/*.c) $(wildcard Source/Counting/*.c) Source/Utilities/Utilities.c
+ArenaFiles= $(wildcard Source/MemoryArena/**/*.c) 
+TestFiles = $(wildcard Tests/*.c) $(wildcard Tests/**/*.c) $(wildcard Tests/**/**/*.c) 
 
-debug: main.c  $(TubeCountingFiles) $(ArenaFiles)  $(GenFiles)
-	$(CC) main.c $(TubeCountingFiles) $(ArenaFiles)  $(GenFiles) -g -Wall -pedantic -o .build/main.exe
+main: $(TubeCountingFiles) $(ArenaFiles) 
+	$(CC) Source/main.c $(TubeCountingFiles) $(ArenaFiles)  -Wall -pedantic -o .build/TubeCounting.exe
 
+debug: $(TubeCountingFiles) $(ArenaFiles) 
+	$(CC) Source/main.c $(TubeCountingFiles) $(ArenaFiles)  -g -Wall -pedantic -o .build/TubeCounting.exe
 
-main: main.c  $(TubeCountingFiles) $(ArenaFiles)  $(GenFiles)
-	$(CC) main.c $(TubeCountingFiles) $(ArenaFiles)  $(GenFiles) -Wall -pedantic -o main.exe
+Tests: $(TubeCountingFiles) $(ArenaFiles) $(TestFiles)
+	$(CC) $(TestFiles) $(TubeCountingFiles) $(ArenaFiles)  -g -Wall -pedantic -o .build/Tests.exe
 
-
-Test: $(TubeCountingFiles) $(ArenaFiles) $(TestFiles) $(GenFiles)
-	$(CC) $(TubeCountingFiles) $(ArenaFiles) $(TestFiles) $(GenFiles) -Wall -pedantic -o build/main.exe
 

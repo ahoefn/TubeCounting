@@ -1,4 +1,7 @@
-#include "ArenaArray.h"
+#include <stdlib.h>
+#include <assert.h>
+
+#include "ArenaArrayInt.h"
 
 int ArenaArrayIntGet(int index, ArenaArrayInt array)
 {

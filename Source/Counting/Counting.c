@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdbool.h>
+
 #include "Counting.h"
 
 bool DoesNotCross(Tube T1, Tube T2)

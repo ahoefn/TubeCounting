@@ -2,6 +2,7 @@
 #define TUBES
 
 #include "../MemoryArena/MemoryArena.h"
+
 typedef struct Tube
 {
     int start;

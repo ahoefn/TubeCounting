@@ -1,4 +1,7 @@
-#include "ArenaArray.h"
+#include <stdlib.h>
+#include <assert.h>
+
+#include "ArenaArrayFloat.h"
 
 float ArenaArrayFloatGet(int index, ArenaArrayFloat array)
 {

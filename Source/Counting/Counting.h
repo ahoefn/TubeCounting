@@ -1,6 +1,7 @@
 #ifndef TUBECOUNTING
 #define TUBECOUNTING
 
+#include <stdbool.h>
 #include "../Tubes/Tubes.h"
 
 Tubing GenConnectedTubes(int n, Arena *arenaPtr);

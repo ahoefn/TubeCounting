@@ -1,4 +1,8 @@
-#include "../../Source/MemoryArena/ArenaArray/ArenaArray.h"
+#include <stdio.h>
+#include <assert.h>
+
+#include "../../../Source/MemoryArena/ArenaArray/ArenaArrayInt.h"
+#include "../../../Source/MemoryArena/ArenaArray/ArenaArrayFloat.h"
 
 void ArenaArrayIntCreateTest();
 void ArenaArrayIntGetSetTest();

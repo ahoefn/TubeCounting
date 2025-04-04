@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 #include "ArenaTests.h"
 #include "ArenaBase/ArenaBaseTests.h"
 #include "ArenaArray/ArenaArrayTests.h"

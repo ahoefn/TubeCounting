@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+
 #include "Tubes.h"
 
 Tube TubeCreate(int start_in, int end_in)

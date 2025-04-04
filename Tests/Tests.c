@@ -1,6 +1,5 @@
-#include "../Source/Utilities/Utilities.h"
-#include "../Source/Counting/Counting.h"
-#include "../Source/Tubes/Tubes.h"
+#include <stdio.h>
+
 #include "CountingTests.h"
 
 int main()
