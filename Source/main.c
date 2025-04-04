@@ -9,7 +9,7 @@ int main()
 {
     // Allocate all memory at once, can be customized if required
     long long unsigned int memorySize = 3000000000 * sizeof(Tube);
-    printf("memroysize : %lli\n", memorySize);
+    printf("Memory size: %llu\n", memorySize);
 
     // Arena for memory management
     Arena arena = ArenaCreate(memorySize);
