@@ -1,3 +1,5 @@
+// Allows us to create an array of unknown size, iteratively adding elements until construction is completed.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>

@@ -1,3 +1,5 @@
+// Base initialzation and creation functions for the memoery arena
+
 #include <stdlib.h>
 #include <assert.h>
 
@@ -31,16 +33,7 @@ void *ArenaAlloc(int size, Arena *arenaPtr)
     assert(arenaPtr->memoryPtr != NULL);
     assert(arenaPtr->end != NULL);
     assert(arenaPtr->nextLocation != NULL);
-
     assert(arenaPtr->nextLocation + size <= arenaPtr->end);
-
-    // // Allocate more dynamically:
-    // if (arenaPtr->nextLocation + size <= arenaPtr->end)
-    // {
-    //     int maxSize = arenaPtr->end - arenaPtr->memoryPtr;
-    //     arenaPtr->memoryPtr = realloc(arenaPtr->memoryPtr, 2 * maxSize);
-    //     arenaPtr->end = arenaPtr->memoryPtr + 2 * maxSize;
-    // }
 
     void *outputLocation = arenaPtr->nextLocation;
     arenaPtr->nextLocation = arenaPtr->nextLocation + size;

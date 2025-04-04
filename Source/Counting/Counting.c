@@ -3,6 +3,7 @@
 
 #include "Counting.h"
 
+// Determines if two tubes are non crossing or not
 bool DoesNotCross(Tube T1, Tube T2)
 {
     bool T1IsSubset = (T2.start <= T1.start) & (T1.end <= T2.end);
@@ -11,6 +12,7 @@ bool DoesNotCross(Tube T1, Tube T2)
     return T1IsSubset | t2IsSubset | areDisjoint;
 }
 
+// Generates all connected tubes for a diagram with n vertices
 TubeArenaArray GenConnectedTubes(int n, Arena *arenaPtr)
 {
     int size = n * (n + 1) / 2;
@@ -27,6 +29,7 @@ TubeArenaArray GenConnectedTubes(int n, Arena *arenaPtr)
     return output;
 }
 
+// Given a tubing and a tube T, selects only those tubes in the tubing that are non crossing with T
 Tubing SelectValidTubes(Tube T, Tubing tubing, Arena *arenaPtr)
 {
     TubeIterativeArray array = TubeIterativeCreate(arenaPtr);
@@ -43,13 +46,16 @@ Tubing SelectValidTubes(Tube T, Tubing tubing, Arena *arenaPtr)
     return output;
 }
 
+// Counts all valid tubings that are completely non-crossing and connected
 int CountValidTubes(Tubing tubing, Arena *arenaPtr)
 {
+    // Base case of recursion:
     if (tubing.size == 1)
     {
         return 1;
     }
 
+    // Recursive calculation for size > 1
     Tube firstTube = TubeArrayGet(0, tubing);
     Tubing firstRemoved = TubeArraySubCreate(1, tubing.size, tubing);
     Tubing validTubes = SelectValidTubes(firstTube, firstRemoved, arenaPtr);

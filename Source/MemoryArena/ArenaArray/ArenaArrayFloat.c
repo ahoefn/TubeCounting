@@ -1,3 +1,5 @@
+// General int array functions, not actually used here but useful to have on hand
+
 #include <stdlib.h>
 #include <assert.h>
 

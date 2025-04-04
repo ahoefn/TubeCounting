@@ -1,3 +1,5 @@
+// Useful functions that allow us to work with arrays of tubes within a memory arena
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
@@ -36,6 +38,8 @@ TubeArenaArray TubeArrayCreate(int size, Arena *arenaPtr)
     return array;
 }
 
+// Creates a subarray within another array, note that these point to the same memory location
+// so if one is changed the other will as well
 TubeArenaArray TubeArraySubCreate(int start, int end, TubeArenaArray array)
 {
     assert(start >= 0);
