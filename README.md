@@ -8,7 +8,7 @@ If the 'gcc' compiler and 'GNU make' are installed, the project can be build sim
 
 while in the TubeCounting directory, and then 
 
-    ./.build/main.exe
+    ./.build/TubeCounting.exe
 
 to run the actual program. If make is not installed, build using
 
